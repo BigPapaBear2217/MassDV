@@ -1,17 +1,13 @@
-print(Config.ChatPrefix.. " MassDV by ImAidanJ")
-print(Config.ChatPrefix.. " Discord: https://discord.gg/cGdUjQQnNT")
-print(Config.ChatPrefix.. " Version: 1.1.0")
-
 RegisterCommand(Config.CommandName, function(source, args, rawCommand)
     if not Config.UseAcePermissions or IsPlayerAceAllowed(source, Config.AcePermissionString) then
         --
         --
         --
-        if Config.CountdownEnabled then -- This is to enable or disable the Countdown
+        if Config.CountdownEnabled then
             TriggerClientEvent('chat:addMessage', -1, {
                 color = {255, 255, 255},
                 multiline = true,
-                args = {Config.ChatPrefix, "Starting countdown..."}
+                args = {"^4[AJ:MassDV]^0 Starting countdown..."}
             })
 
             for i = Config.CountdownDuration, 1, -1 do
@@ -19,7 +15,7 @@ RegisterCommand(Config.CommandName, function(source, args, rawCommand)
                 TriggerClientEvent('chat:addMessage', -1, {
                     color = {255, 255, 255},
                     multiline = true,
-                    args = {Config.ChatPrefix, tostring(i)}
+                    args = {"^4[AJ:MassDV]^0", tostring(i)}
                 })
             end
         end
@@ -34,24 +30,24 @@ RegisterCommand(Config.CommandName, function(source, args, rawCommand)
         --
         --
         --
-        if Config.ClearChatAfterCleanup then  -- This is to enable or disable Chat Cleanup
+        if Config.ClearChatAfterCleanup then
             TriggerClientEvent('chat:clear', -1)
         end 
         --
         --
         --
-        TriggerClientEvent("chat:addMessage", -1, {
-            template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(46, 235, 94, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>',
-            args = {Config.ChatPrefix.. " MassDV has been Completed."}
-        })
+        TriggerClientEvent("chat:addMessage", -1, { template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(46, 235, 94, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>', args = {"^4[AJ:MassDV]^0 MassDV has been Completed."}})
         --
         --
         --
     else
-        TriggerClientEvent("chat:addMessage", source, {
-            template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(46, 235, 94, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>',
-            args = {Config.ChatPrefix.. " You do not have permission to use this command."}
-        })
-            
+        TriggerClientEvent("chat:addMessage", source, {template = '<div style="padding: 0.5vw; text-align: center; margin: 0.5vw; background-color: rgba(46, 235, 94, 0.6); border-radius: 3px; color: white;"><b>{0}</b></div>', args = {"^4[AJ:MassDV]^0 You do not have permission to use this command."}})    
     end
 end, false)
+
+-- Credits --
+-- Don't be weird.. Leave my Credits!!
+
+print("^4[AJ:MassDV]^0 MassDV by ImAidanJ")
+print("^4[AJ:MassDV]^0 Discord: https://discord.gg/cGdUjQQnNT")
+print("^4[AJ:MassDV]^0 Version: 1.1.1")

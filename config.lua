@@ -2,8 +2,6 @@ Config = {
 
 CommandName = "massdv", -- What the command is /massdv by default.
 
-ChatPrefix = "^4[AJ:MassDV]^0",  -- Message Prefix [AJ:MASSDV] 'Message' by default
-
 AcePermissionString = "AJ.MassDV", -- If you have questions DM me (iamaidanj) on discord. | 'add_ace [GROUP] AJ.MassDV allow' by default
 
 UseAcePermissions = false,  -- Set to true to turn on Perms
