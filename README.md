@@ -1,11 +1,6 @@
 ## Script created by ImAidanJ (iamaidanj)
 DM or Join the Discord for Help (https://discord.gg/cGdUjQQnNT)
 
-## MY FIVEM SERVER
-CHECK OUT CYBERSTATE ROLEPLAY
-https://discord.gg/An79ZgmqBJ // DISCORD
-https://cfx.re/join/a8ppbk // FIVEM
-
 ## HOW TO INSTALL
 1. drag MassDV to your 'resources' folder
 2. add 'start MassDV' to your server.cfg
